@@ -5,7 +5,6 @@ function scrollBetweenInfo(event){
             if(event.deltaY == 102){
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#works';
-                console.log("scrolled");
             }
             break;
         case('myWorks'):
