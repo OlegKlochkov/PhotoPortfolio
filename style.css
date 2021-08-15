@@ -33,7 +33,19 @@ html, body{
         text-align:center;
         width:80%;
         height:100px} 
-    }
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;
+}
 
 a{
     text-decoration: none;
