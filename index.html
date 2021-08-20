@@ -44,18 +44,19 @@
         <div class="myWorks" id="works">
             <a href="#intro"><img src="images/blackCollapseArrow.png"></a>
             <h3>Мои работы</h3>
-            <div class="photoExamples">
+            <div class="photoExamples" id="photos">
                 <div class="photoRow">
-                    <img src="images/firstPhoto.jpg">
-                    <img src="images/secondPhoto.jpg">
-                    <img src="images/thirdPhoto.jpg">
+                    <img id="firstPhoto" onclick="showFullImage(this.src)" src="images/firstPhoto.jpg">
+                    <img id="secondPhoto" onclick="showFullImage(this.src)" src="images/secondPhoto.jpg">
+                    <img id="thirdPhoto" onclick="showFullImage(this.src)" src="images/thirdPhoto.jpg">
                 </div>
                 <div class="photoRow">
-                    <img src="images/fourthPhoto.jpg">
-                    <img src="images/fifthPhoto.jpg">
-                    <img src="images/sixthPhoto.jpg">
+                    <img id="fourthPhoto" onclick="showFullImage(this.src)" src="images/fourthPhoto.jpg">
+                    <img id="fifthPhoto" onclick="showFullImage(this.src)" src="images/fifthPhoto.jpg">
+                    <img id="sixthPhoto" onclick="showFullImage(this.src)" src="images/sixthPhoto.jpg">
                 </div>
             </div>
+            <button id="showButton" onclick="showOtherImages()" hidden>Посмотреть другие изображения</button>
             <a href="#feedback"><img src="images/whiteExpandArrow.png"></a>
         </div>
         <div class="feedbackForm" id="feedback">

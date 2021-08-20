@@ -27,3 +27,20 @@ function scrollBetweenInfo(event){
 
 const element = document.querySelector('main');
 element.onwheel = scrollBetweenInfo;
+const images = ["firstPhoto", "secondPhoto", "thirdPhoto", "fourthPhoto", "fifthPhoto", "sixthPhoto"];
+
+function showFullImage(src){
+    for(let i = 0; i < images.length; i++){
+        document.getElementById(images[i]).hidden = true;
+    }
+    document.getElementById('photos').style.background = "url('" + src + "') no-repeat center";
+    document.getElementById('showButton').hidden = false;
+}
+
+function showOtherImages(){
+    for(let i = 0; i < images.length; i++){
+        document.getElementById(images[i]).hidden = false;
+    }
+    document.getElementById('photos').style.background = "transparent";
+    document.getElementById('showButton').hidden = true;
+}
