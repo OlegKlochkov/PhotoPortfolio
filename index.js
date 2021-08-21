@@ -41,6 +41,23 @@ function showOtherImages(){
     for(let i = 0; i < images.length; i++){
         document.getElementById(images[i]).hidden = false;
     }
-    document.getElementById('photos').style.background = "transparent";
+    document.getElementById('photos').style.background = "";
     document.getElementById('showButton').hidden = true;
 }
+
+const photos = document.getElementById('photos');
+
+photos.addEventListener('mouseover', function(event){
+    if(photos.style.background != ''){
+        document.getElementById('showButton').hidden = false;
+        /* event.target.style.background = 'rgba(0,0,0,.5)'; */
+        photos.style.webkitFilter = "brightness(60%)";
+        document.getElementById('showButton').style.webkitFilter = "";
+    }
+});
+
+photos.addEventListener('mouseout', function(event){
+    document.getElementById('showButton').hidden = true;
+    /* event.target.style.background = ''; */
+    photos.style.webkitFilter = "";
+});

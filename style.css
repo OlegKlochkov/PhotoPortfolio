@@ -159,6 +159,13 @@ main{
     height: 100%;
 }
 
+#showButton{
+    background: transparent;
+    border-radius: 20%;
+    color: white;
+    height: 10%;
+}
+
 .feedbackForm{
     display: flex;
     flex-direction: column;
