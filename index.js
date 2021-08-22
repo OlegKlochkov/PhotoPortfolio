@@ -1,13 +1,12 @@
 function scrollBetweenInfo(event){
     event.preventDefault;
-    switch(event.target.className){
-        case('introduction'):
-            if(event.deltaY == 102){
-                location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-                location.href = '#works';
-            }
-            break;
-        case('myWorks'):
+    if(document.getElementById('intro').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'intro'){
+        if(event.deltaY == 102){
+            location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
+            location.href = '#works';
+        }
+    }else{
+        if(document.getElementById('works').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'works'){
             if(event.deltaY == 102){
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#feedback';
@@ -15,13 +14,14 @@ function scrollBetweenInfo(event){
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#intro';
             }
-            break;
-        case('feedbackForm'):
-            if(event.deltaY == -102){
-                location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-                location.href = '#works';
+        }else{
+            if(document.getElementById('feedback').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'feedback'){
+                if(event.deltaY == -102){
+                    location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
+                    location.href = '#works';
+                }
             }
-            break;
+        }
     }
 }
 
