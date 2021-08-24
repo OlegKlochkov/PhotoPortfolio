@@ -66,13 +66,13 @@ header{
 
     width: 100%;
     height: 5%;
+    height: -moz-min-content;
+    min-height: fit-content;
     background: #45658A;
     color: white;
-
-    visibility: collapse;
 }
 
-.headerDiv{
+header div{
     padding-left: 2.5%;
 }
 
@@ -95,6 +95,7 @@ div .headerElement{
 }
 
 .headerElement:hover{
+    color: black;
     font-size: larger; 
 }
 
@@ -120,17 +121,6 @@ main{
     height: 100%;
     background: url('images/streetBackground.jpg') no-repeat center;
     color: white;
-}
-
-.introHeader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    top: 0%;
-    position: absolute;
-    width: 100%;
-    height: 5%;
 }
 
 .myWorks{
