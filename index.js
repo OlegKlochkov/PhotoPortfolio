@@ -66,6 +66,5 @@ window.onload = window.onhashchange = function () {
     //FIX LINKS AFTER GITHUB PAGES DEPLOY
     if (location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro') {
         document.querySelector('header').style.background = '#45658A';
-        console.log('fixed!')
     }
 }
