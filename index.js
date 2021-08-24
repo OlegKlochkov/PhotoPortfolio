@@ -61,8 +61,11 @@ photos.addEventListener('mouseout', function(event){
     photos.style.webkitFilter = "";
 });
 
-//work around a bug where the header remains transparent after page reload
-//FIX LINKS AFTER GITHUB PAGES DEPLOY
-if(location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro'){
-    document.querySelector('header').style.background = '#45658A';
+window.onload = window.onhashchange = function () {
+    //work around a bug where the header remains transparent after page reload
+    //FIX LINKS AFTER GITHUB PAGES DEPLOY
+    if (location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro') {
+        document.querySelector('header').style.background = '#45658A';
+        console.log('fixed!')
+    }
 }
