@@ -4,7 +4,6 @@ function scrollBetweenInfo(event){
         if(event.deltaY == 102){
             location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
             location.href = '#works';
-            document.querySelector('header').style.background = '#45658A';
         }
     }else{
         if(document.getElementById('works').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'works'){
@@ -14,7 +13,6 @@ function scrollBetweenInfo(event){
             }else{
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#intro';
-                document.querySelector('header').style.background = 'transparent';
             }
         }else{
             if(document.getElementById('feedback').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'feedback'){
@@ -66,5 +64,13 @@ window.onload = window.onhashchange = function () {
     //FIX LINKS AFTER GITHUB PAGES DEPLOY
     if (location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro') {
         document.querySelector('header').style.background = '#45658A';
+    }else{
+        document.querySelector('header').style.background = 'transparent';
+    }
+
+    if(location.href === 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#feedback'){
+        document.querySelector('footer').style.visibility = 'initial';
+    }else{
+        document.querySelector('footer').style.visibility = 'collapse';
     }
 }
