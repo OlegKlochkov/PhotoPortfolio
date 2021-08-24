@@ -7,7 +7,7 @@
         Photo Portfolio
     </title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Playfair+Display&display=swap"
@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <div>
+        <div class="headerDiv">
             <a class="headerElement" href="#intro">
                 <h3>Джон Дое</h3>
             </a>
@@ -32,6 +32,21 @@
     </header>
     <main>
         <div class="introduction" id="intro">
+            <div class="introHeader">
+                <div class="headerDiv">
+                    <a class="headerElement" href="#intro">
+                        <h3>Джон Дое</h3>
+                    </a>
+                </div>
+                <nav>
+                    <a class="headerElement" href="#works">
+                        <h3>Мои работы</h3>
+                    </a>
+                    <a class="headerElement" href="#feedback">
+                        <h3>Заказать фотосет</h3>
+                    </a>
+                </nav>
+            </div>
             <h1>Джон Дое</h1>
             <img id="photographer" src="images/photographer.jpg" alt="Фотограф">
             <h2>
@@ -50,7 +65,9 @@
                     <img id="secondPhoto" onclick="showFullImage(this.src)" src="images/secondPhotoSmall.jpg">
                     <img id="thirdPhoto" onclick="showFullImage(this.src)" src="images/thirdPhotoSmall.jpg">
                 </div>
-                <button id="showButton" onclick="showOtherImages()" hidden><h3>ВСЕ ФОТО</h3></button>
+                <button id="showButton" onclick="showOtherImages()" hidden>
+                    <h3>ВСЕ ФОТО</h3>
+                </button>
                 <div class="photoRow">
                     <img id="fourthPhoto" onclick="showFullImage(this.src)" src="images/fourthPhotoSmall.jpg">
                     <img id="fifthPhoto" onclick="showFullImage(this.src)" src="images/fifthPhotoSmall.jpg">

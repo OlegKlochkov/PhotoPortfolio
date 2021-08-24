@@ -4,6 +4,7 @@ function scrollBetweenInfo(event){
         if(event.deltaY == 102){
             location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
             location.href = '#works';
+            document.querySelector('header').style.visibility = "initial";
         }
     }else{
         if(document.getElementById('works').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'works'){
@@ -13,6 +14,7 @@ function scrollBetweenInfo(event){
             }else{
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#intro';
+                document.querySelector('header').style.visibility = "collapse";
             }
         }else{
             if(document.getElementById('feedback').innerHTML.includes('id="' + event.target.id + '"') || event.target.id === 'feedback'){
