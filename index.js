@@ -1,5 +1,6 @@
-function scrollBetweenInfo(event) {
+window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
+    //FIX LINKS AFTER GITHUB PAGES DEPLOY
     switch (location.href) {
         case('file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html'):
         case('file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro'):
@@ -24,9 +25,21 @@ function scrollBetweenInfo(event) {
             }
             break;
     }
-}
+};
+window.onload = window.onhashchange = function changeHeaderAndFooter() {//changes header/footer according to the section
+    //FIX LINKS AFTER GITHUB PAGES DEPLOY
+    if (location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro') {
+        document.querySelector('header').style.background = '#45658A';
+    } else {
+        document.querySelector('header').style.background = 'transparent';
+    }
 
-window.onwheel = scrollBetweenInfo;
+    if (location.href === 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#feedback') {
+        document.querySelector('footer').style.visibility = 'initial';
+    } else {
+        document.querySelector('footer').style.visibility = 'collapse';
+    }
+}
 
 const images = ["firstPhoto", "secondPhoto", "thirdPhoto", "fourthPhoto", "fifthPhoto", "sixthPhoto"];
 
@@ -59,19 +72,3 @@ photos.addEventListener('mouseout', function (event) {
     document.getElementById('showButton').hidden = true;
     photos.style.webkitFilter = "";
 });
-
-window.onload = window.onhashchange = function () {
-    //work around a bug where the header remains transparent after page reload
-    //FIX LINKS AFTER GITHUB PAGES DEPLOY
-    if (location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro') {
-        document.querySelector('header').style.background = '#45658A';
-    } else {
-        document.querySelector('header').style.background = 'transparent';
-    }
-
-    if (location.href === 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#feedback') {
-        document.querySelector('footer').style.visibility = 'initial';
-    } else {
-        document.querySelector('footer').style.visibility = 'collapse';
-    }
-}
