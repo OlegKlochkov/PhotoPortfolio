@@ -65,10 +65,12 @@ photos.addEventListener('mouseover', function (event) {
     if (photos.style.background != '') {
         document.getElementById('showButton').hidden = false;
         photos.style.webkitFilter = "brightness(60%)";
+        photos.style.cursor = "pointer";
     }
 });
 
 photos.addEventListener('mouseout', function (event) {
     document.getElementById('showButton').hidden = true;
     photos.style.webkitFilter = "";
+    photos.style.cursor = "";
 });
