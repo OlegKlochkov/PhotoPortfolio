@@ -17,37 +17,30 @@ html, body{
 }
 
 @media only screen and (max-height: 500px) {
-    body{
-        display:none
-    } 
-    html:before{
-        content:'Переверните устройство в портретный режим или откройте сайт с компьютера.';
-        position:fixed;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        margin:auto;
-        background:#fff;
-        z-index:999;
-        text-align:center;
-        width:80%;
-        height:100px} 
+    .introduction{
+        background: url('images/streetBackground.jpg') no-repeat top;
+    }
+}
+
+@media only screen and (min-height: 500px) {
+    .introduction{
+        background: url('images/streetBackground.jpg') no-repeat center;
+    }
 }
 
 h1{
     font-family: 'Playfair Display', serif;
-    font-size: 4vh;
+    font-size: min(4vw, 4vh);
 }
 
 h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 3vh;
+    font-size: min(3vw, 3vh);
 }
 
 h3, input, textarea, #sendButton{
     font-family: 'Lato', sans-serif;
-    font-size: 2vh;
+    font-size: min(2vw, 2vh);
 }
 
 a{
@@ -122,9 +115,13 @@ main{
 }
 
 .introduction{
-    background: url('images/streetBackground.jpg') no-repeat center;
     color: white;
 }
+
+#photographer {
+    max-width: 50%;
+    max-height: 50%
+  }
 
 .myWorks{
     background: url('images/treesBackground.jpg') no-repeat center;
@@ -136,8 +133,8 @@ main{
     justify-content: space-between;
     align-items: center;
 
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
 }
 
 .photoRow{
@@ -207,6 +204,9 @@ input, textarea{
     border: thin solid black;
 
     width: 20%;
+    min-width: fit-content;
+    width: -moz-fit-content;
+    margin-left: 2%;
 }
 
 footer{

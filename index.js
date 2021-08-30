@@ -48,6 +48,7 @@ function showFullImage(src) {
         document.getElementById(images[i]).hidden = true;
     }
     document.getElementById('photos').style.background = "url('" + src + "') no-repeat center";
+    document.getElementById('photos').style.backgroundSize = "contain";
     document.getElementById('showButton').hidden = false;
 }
 
