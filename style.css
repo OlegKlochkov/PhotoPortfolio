@@ -82,17 +82,34 @@ nav{
 }
 
 .headerElement{
-    width: 20%;
     width: 50%;
     text-align: center;
+
+    position: relative;
 }
 
-div .headerElement{
+.headerElement:after{
+    content: "";
+    position: absolute;
+    background: white;
+    background-image: linear-gradient(to right, white, gray);
+    left: 0;
+    bottom: 20%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
     width: 100%;
+    height: 5%;
 }
 
-.headerElement:hover{
-    color: gray; 
+.headerElement:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+#headerIntroLink{
+    width: 10%;
 }
 
 main, .introduction, .myWorks, .feedbackForm, form{
@@ -107,6 +124,11 @@ main{
     width: 100%;
     height: 100%;
     overflow-y: auto;
+}
+
+.arrowLinkImg{
+    max-width: max(3vh, 3vw);
+    max-height: max(3vh, 3vw);
 }
 
 .introduction, .myWorks, .feedbackForm{
