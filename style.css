@@ -234,7 +234,7 @@ label {
     font-size: min(2vw,2vh);
 
     transform: scale(1);
-    transform-origin: top;
+    transform-origin: 0 0;
     transition: transform 250ms ease-in;
     pointer-events: none;
     padding-top: max(1.5vh,1%);
