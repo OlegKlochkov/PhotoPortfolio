@@ -1,5 +1,7 @@
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
+    console.log('event fired');
+    console.log(event.deltaY);
     switch (location.href) {
         case('https://olegklochkov.github.io/PhotoPortfolio/'):
         case('https://olegklochkov.github.io/PhotoPortfolio/#intro'):
