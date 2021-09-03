@@ -9,7 +9,7 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
             }
             break;
         case('#works'):
-            if (event.deltaY < 0) {
+            if (event.deltaY > 0) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#feedback';
             } else {
