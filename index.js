@@ -1,7 +1,7 @@
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
     switch (location.href) {
-        case('https://olegklochkov.github.io/PhotoPortfolio'):
+        case('https://olegklochkov.github.io/PhotoPortfolio/'):
         case('https://olegklochkov.github.io/PhotoPortfolio/#intro'):
             if (event.deltaY == 102) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
@@ -26,7 +26,7 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
     }
 };
 window.onload = window.onhashchange = function changeHeaderAndFooter() {//changes header/footer according to the section
-    if (location.href != 'https://olegklochkov.github.io/PhotoPortfolio' && location.href != 'https://olegklochkov.github.io/PhotoPortfolio/#intro') {
+    if (location.href != 'https://olegklochkov.github.io/PhotoPortfolio/' && location.href != 'https://olegklochkov.github.io/PhotoPortfolio/#intro') {
         document.querySelector('header').style.background = '#45658A';
     } else {
         document.querySelector('header').style.background = 'transparent';
