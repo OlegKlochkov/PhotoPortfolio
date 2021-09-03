@@ -43,11 +43,7 @@ h3, input, textarea, #sendButton{
     font-size: min(2vw, 2vh);
 }
 
-a{
-    text-decoration: none;
-}
-
-a:visited{
+a, a:visited{
     text-decoration: none;
     color: white;
 }
