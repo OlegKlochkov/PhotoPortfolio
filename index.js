@@ -1,15 +1,14 @@
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
-    //FIX LINKS AFTER GITHUB PAGES DEPLOY
     switch (location.href) {
-        case('file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html'):
-        case('file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro'):
+        case('https://olegklochkov.github.io/PhotoPortfolio'):
+        case('https://olegklochkov.github.io/PhotoPortfolio/#intro'):
             if (event.deltaY == 102) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#works';
             }
             break;
-        case('file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#works'):
+        case('https://olegklochkov.github.io/PhotoPortfolio/#works'):
             if (event.deltaY == 102) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#feedback';
@@ -18,7 +17,7 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
                 location.href = '#intro';
             }
             break;
-        case('file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#feedback'):
+        case('https://olegklochkov.github.io/PhotoPortfolio/#feedback'):
             if (event.deltaY == -102) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#works';
@@ -27,14 +26,13 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
     }
 };
 window.onload = window.onhashchange = function changeHeaderAndFooter() {//changes header/footer according to the section
-    //FIX LINKS AFTER GITHUB PAGES DEPLOY
-    if (location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html' && location.href != 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#intro') {
+    if (location.href != 'https://olegklochkov.github.io/PhotoPortfolio' && location.href != 'https://olegklochkov.github.io/PhotoPortfolio/#intro') {
         document.querySelector('header').style.background = '#45658A';
     } else {
         document.querySelector('header').style.background = 'transparent';
     }
 
-    if (location.href === 'file:///C:/Users/oaklo/Desktop/SelfEducation/PhotoPortfolio/index.html#feedback') {
+    if (location.href === 'https://olegklochkov.github.io/PhotoPortfolio/#feedback') {
         document.querySelector('footer').style.visibility = 'initial';
     } else {
         document.querySelector('footer').style.visibility = 'collapse';
