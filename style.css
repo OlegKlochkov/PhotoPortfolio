@@ -25,6 +25,7 @@ html, body{
 @media only screen and (min-height: 500px) {
     .introduction{
         background: url('images/streetBackground.jpg') no-repeat center;
+        background-size: cover;
     }
 }
 
@@ -134,6 +135,7 @@ main{
 
 .introduction{
     color: white;
+    background-size: cover;
 }
 
 #photographer {
@@ -143,6 +145,7 @@ main{
 
 .myWorks{
     background: url('images/treesBackground.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .photoExamples{
@@ -183,6 +186,7 @@ main{
 
 .feedbackForm{
     background: url('images/beachBackground.jpg') no-repeat;
+    background-size: cover;
 }
 
 .feedbackDiv{
