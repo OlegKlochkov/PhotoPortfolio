@@ -1,17 +1,15 @@
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
-    console.log('event fired');
-    console.log(event.deltaY);
-    switch (location.href) {
-        case('https://olegklochkov.github.io/PhotoPortfolio/'):
-        case('https://olegklochkov.github.io/PhotoPortfolio/#intro'):
-            if (event.deltaY == 102) {
+    switch (window.location.hash) {
+        case(''):
+        case('#intro'):
+            if (event.deltaY > 0) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#works';
             }
             break;
-        case('https://olegklochkov.github.io/PhotoPortfolio/#works'):
-            if (event.deltaY == 102) {
+        case('#works'):
+            if (event.deltaY < 0) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#feedback';
             } else {
@@ -19,8 +17,8 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
                 location.href = '#intro';
             }
             break;
-        case('https://olegklochkov.github.io/PhotoPortfolio/#feedback'):
-            if (event.deltaY == -102) {
+        case('#feedback'):
+            if (event.deltaY < 0) {
                 location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
                 location.href = '#works';
             }
@@ -28,13 +26,13 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
     }
 };
 window.onload = window.onhashchange = function changeHeaderAndFooter() {//changes header/footer according to the section
-    if (location.href != 'https://olegklochkov.github.io/PhotoPortfolio/' && location.href != 'https://olegklochkov.github.io/PhotoPortfolio/#intro') {
+    if (window.location.hash != '' && window.location.hash != '#intro') {
         document.querySelector('header').style.background = '#45658A';
     } else {
         document.querySelector('header').style.background = 'transparent';
     }
 
-    if (location.href === 'https://olegklochkov.github.io/PhotoPortfolio/#feedback') {
+    if (window.location.hash === '#feedback') {
         document.querySelector('footer').style.visibility = 'initial';
     } else {
         document.querySelector('footer').style.visibility = 'collapse';
