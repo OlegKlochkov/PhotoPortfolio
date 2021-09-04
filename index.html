@@ -37,10 +37,10 @@
                 <br>
                 Здесь вы сможете ознакомиться с моими работами и заказать фотосет вашей мечты
             </h2>
-            <a href="#works"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
+            <a onclick="changeLocation('works', this.parentElement.id)"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
         </div>
         <div class="myWorks" id="works">
-            <a href="#intro"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
+            <a onclick="changeLocation('intro', this.parentElement.id)"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
             <h3>Мои работы</h3>
             <div class="photoExamples" id="photos">
                 <div class="photoRow">
@@ -57,10 +57,10 @@
                     <img id="sixthPhoto" onclick="showFullImage(this.src)" src="images/sixthPhotoSmall.jpg">
                 </div>
             </div>
-            <a href="#feedback"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
+            <a onclick="changeLocation('feedback', this.parentElement.id)"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
         </div>
         <div class="feedbackForm" id="feedback">
-            <a href="#works"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
+            <a onclick="changeLocation('works', this.parentElement.id)"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
             <div class="feedbackDiv">
                 <form>
                     <h3>Заказать фотосет</h3>
