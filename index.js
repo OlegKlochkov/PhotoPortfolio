@@ -1,4 +1,4 @@
-function changeLocation(id, parentElementId){
+function changeLocation(id, parentElementId) {
     location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
     location.href = '#' + id;
     document.getElementById(id).style.visibility = 'initial';
@@ -8,34 +8,39 @@ function changeLocation(id, parentElementId){
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
     switch (window.location.hash) {
-        case(''):
-        case('#intro'):
+        case (''):
+        case ('#intro'):
             if (event.deltaY > 0) {
                 changeLocation('works', 'intro');
             }
             break;
-        case('#works'):
+        case ('#works'):
             if (event.deltaY > 0) {
                 changeLocation('feedback', 'works');
             } else {
                 changeLocation('intro', 'works');
             }
             break;
-        case('#feedback'):
+        case ('#feedback'):
             if (event.deltaY < 0) {
                 changeLocation('works', 'feedback');
             }
             break;
     }
 };
-window.onload = window.onhashchange = function changeHeaderAndFooter() {//changes header/footer according to the section
-/*     if (window.location.hash != '' && window.location.hash != '#intro') {
-        document.querySelector('header').style.background = '#45658A';
-    } else {
-        document.querySelector('header').style.background = 'transparent';
-    } */
+window.onload = window.onhashchange = function loadCurrentLocation() {
+    switch (window.location.hash) {
+        case ('#works'):
+            document.getElementById('works').style.visibility = 'initial';
+            document.getElementById('intro').style.visibility = 'collapse';
+            break;
+        case ('#feedback'):
+            document.getElementById('feedback').style.visibility = 'initial';
+            document.getElementById('intro').style.visibility = 'collapse';
+            break;
+    }
 
-    if (window.location.hash === '#feedback') {
+    if (window.location.hash === '#feedback') {//footer is only shown in the 'feedback' div
         document.querySelector('footer').style.visibility = 'initial';
     } else {
         document.querySelector('footer').style.visibility = 'collapse';
