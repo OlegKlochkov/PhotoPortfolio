@@ -1,36 +1,39 @@
+function changeLocation(id, parentElementId){
+    location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
+    location.href = '#' + id;
+    document.getElementById(id).style.visibility = 'initial';
+    document.getElementById(parentElementId).style.visibility = 'collapse';
+}
+
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections
     event.preventDefault;
     switch (window.location.hash) {
         case(''):
         case('#intro'):
             if (event.deltaY > 0) {
-                location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-                location.href = '#works';
+                changeLocation('works', 'intro');
             }
             break;
         case('#works'):
             if (event.deltaY > 0) {
-                location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-                location.href = '#feedback';
+                changeLocation('feedback', 'works');
             } else {
-                location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-                location.href = '#intro';
+                changeLocation('intro', 'works');
             }
             break;
         case('#feedback'):
             if (event.deltaY < 0) {
-                location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-                location.href = '#works';
+                changeLocation('works', 'feedback');
             }
             break;
     }
 };
 window.onload = window.onhashchange = function changeHeaderAndFooter() {//changes header/footer according to the section
-    if (window.location.hash != '' && window.location.hash != '#intro') {
+/*     if (window.location.hash != '' && window.location.hash != '#intro') {
         document.querySelector('header').style.background = '#45658A';
     } else {
         document.querySelector('header').style.background = 'transparent';
-    }
+    } */
 
     if (window.location.hash === '#feedback') {
         document.querySelector('footer').style.visibility = 'initial';
