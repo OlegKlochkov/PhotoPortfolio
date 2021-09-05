@@ -1,8 +1,11 @@
-function changeLocation(id, parentElementId) {
-    location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
-    location.href = '#' + id;
-    document.getElementById(id).style.visibility = 'initial';
-    document.getElementById(parentElementId).style.visibility = 'collapse';
+function changeLocation(id) {
+    let parentElementId = window.location.hash != '' ? window.location.hash.replace('#', '') : 'intro';
+    if(id !== parentElementId){
+        location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
+        location.href = '#' + id;
+        document.getElementById(id).style.visibility = 'initial';
+        document.getElementById(parentElementId).style.visibility = 'collapse';
+    }
 }
 
 window.onwheel = function scrollBetweenInfo(event) {//function that only lets user scroll through full sections

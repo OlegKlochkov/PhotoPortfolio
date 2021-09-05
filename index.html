@@ -16,14 +16,14 @@
 
 <body>
     <header>
-        <a class="headerElement" id="headerIntroLink" href="#intro">
+        <a class="headerElement" id="headerIntroLink" onclick="changeLocation('intro')">
             <h3>Джон Дое</h3>
         </a>
         <nav>
-            <a class="headerElement" href="#works">
+            <a class="headerElement" onclick="changeLocation('works')">
                 <h3>Мои работы</h3>
             </a>
-            <a class="headerElement" href="#feedback">
+            <a class="headerElement" onclick="changeLocation('feedback')">
                 <h3>Заказать фотосет</h3>
             </a>
         </nav>
@@ -37,10 +37,10 @@
                 <br>
                 Здесь вы сможете ознакомиться с моими работами и заказать фотосет вашей мечты
             </h2>
-            <a onclick="changeLocation('works', this.parentElement.id)"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
+            <a onclick="changeLocation('works')"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
         </div>
         <div class="myWorks" id="works">
-            <a onclick="changeLocation('intro', this.parentElement.id)"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
+            <a onclick="changeLocation('intro')"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
             <h3>Мои работы</h3>
             <div class="photoExamples" id="photos">
                 <div class="photoRow">
@@ -57,10 +57,10 @@
                     <img id="sixthPhoto" onclick="showFullImage(this.src)" src="images/sixthPhotoSmall.jpg">
                 </div>
             </div>
-            <a onclick="changeLocation('feedback', this.parentElement.id)"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
+            <a onclick="changeLocation('feedback')"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
         </div>
         <div class="feedbackForm" id="feedback">
-            <a onclick="changeLocation('works', this.parentElement.id)"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
+            <a onclick="changeLocation('works')"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
             <div class="feedbackDiv">
                 <form>
                     <h3>Заказать фотосет</h3>
