@@ -3,15 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta lang="ru-RU">
     <title>
         Photo Portfolio
     </title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Playfair+Display&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -37,30 +33,30 @@
                 <br>
                 Здесь вы сможете ознакомиться с моими работами и заказать фотосет вашей мечты
             </h2>
-            <a onclick="changeLocation('works')"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
+            <a onclick="changeLocation('works')"><img class="arrowLinkImg" src="images/whiteExpandArrow.png" alt="Следующий раздел"></a>
         </div>
         <div class="myWorks" id="works">
-            <a onclick="changeLocation('intro')"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
+            <a onclick="changeLocation('intro')"><img class="arrowLinkImg" src="images/blackCollapseArrow.png" alt="Предыдущий раздел"></a>
             <h3>Мои работы</h3>
             <div class="photoExamples" id="photos">
                 <div class="photoRow">
-                    <img id="firstPhoto" onclick="showFullImage(this.src)" src="images/firstPhotoSmall.jpg">
-                    <img id="secondPhoto" onclick="showFullImage(this.src)" src="images/secondPhotoSmall.jpg">
-                    <img id="thirdPhoto" onclick="showFullImage(this.src)" src="images/thirdPhotoSmall.jpg">
+                    <img id="firstPhoto" onclick="showFullImage(this.src)" src="images/firstPhotoSmall.jpg" alt="Фото 1/6">
+                    <img id="secondPhoto" onclick="showFullImage(this.src)" src="images/secondPhotoSmall.jpg" alt="Фото 2/6">
+                    <img id="thirdPhoto" onclick="showFullImage(this.src)" src="images/thirdPhotoSmall.jpg" alt="Фото 3/6">
                 </div>
                 <button id="showButton" onclick="showOtherImages()" hidden>
                     <h3>ВСЕ ФОТО</h3>
                 </button>
                 <div class="photoRow">
-                    <img id="fourthPhoto" onclick="showFullImage(this.src)" src="images/fourthPhotoSmall.jpg">
-                    <img id="fifthPhoto" onclick="showFullImage(this.src)" src="images/fifthPhotoSmall.jpg">
-                    <img id="sixthPhoto" onclick="showFullImage(this.src)" src="images/sixthPhotoSmall.jpg">
+                    <img id="fourthPhoto" onclick="showFullImage(this.src)" src="images/fourthPhotoSmall.jpg" alt="Фото 4/6">
+                    <img id="fifthPhoto" onclick="showFullImage(this.src)" src="images/fifthPhotoSmall.jpg" alt="Фото 5/6">
+                    <img id="sixthPhoto" onclick="showFullImage(this.src)" src="images/sixthPhotoSmall.jpg" alt="Фото 6/6">
                 </div>
             </div>
-            <a onclick="changeLocation('feedback')"><img class="arrowLinkImg" src="images/whiteExpandArrow.png"></a>
+            <a onclick="changeLocation('feedback')"><img class="arrowLinkImg" src="images/whiteExpandArrow.png" alt="Следующий раздел"></a>
         </div>
         <div class="feedbackForm" id="feedback">
-            <a onclick="changeLocation('works')"><img class="arrowLinkImg" src="images/blackCollapseArrow.png"></a>
+            <a onclick="changeLocation('works')"><img class="arrowLinkImg" src="images/blackCollapseArrow.png" alt="Предыдущий раздел"></a>
             <div class="feedbackDiv">
                 <form>
                     <h3>Заказать фотосет</h3>
@@ -91,4 +87,8 @@
         </div>
     </footer>
     <script type="text/javascript" src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Playfair+Display&display=swap"
+        rel="stylesheet">
 </body>

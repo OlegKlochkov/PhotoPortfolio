@@ -15,13 +15,13 @@ html, body{
 
 @media only screen and (max-height: 500px) {
     .introduction{
-        background: url('images/streetBackground.jpg') no-repeat top;
+        background: url('images/streetBackground.webp') no-repeat top;
     }
 }
 
 @media only screen and (min-height: 500px) {
     .introduction{
-        background: url('images/streetBackground.jpg') no-repeat center;
+        background: url('images/streetBackground.webp') no-repeat center;
         background-size: cover;
     }
 }
@@ -33,12 +33,12 @@ h1{
 
 h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: min(3vw, 3vh);
+    font-size: min(3.75vw, 3.75vh);
 }
 
 h3, input, textarea, #sendButton{
     font-family: 'Lato', sans-serif;
-    font-size: min(2vw, 2vh);
+    font-size: min(3vw, 2.25vh);
 }
 
 a, a:visited{
@@ -149,7 +149,7 @@ main{
   }
 
 .myWorks{
-    background: url('images/treesBackground.jpg') no-repeat center;
+    background: url('images/treesBackground.webp') no-repeat center;
     background-size: cover;
     visibility: collapse;
 }
@@ -187,7 +187,7 @@ main{
 }
 
 .feedbackForm{
-    background: url('images/beachBackground.jpg') no-repeat;
+    background: url('images/beachBackground.webp') no-repeat;
     background-size: cover;
     visibility: collapse;
 }
@@ -235,7 +235,7 @@ label {
     position: absolute;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: min(2vw,2vh);
+    font-size: min(3vw, 2.25vh);
 
     transform: scale(1);
     transform-origin: 0 0;
