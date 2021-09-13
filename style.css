@@ -64,7 +64,7 @@ header, footer{
 
 header{
     top: 0%;
-    background: #45658A;
+    background: #274E7D;
 }
 
 .headerDiv{
@@ -198,7 +198,7 @@ main{
     justify-content: space-between;
     align-items: flex-end;
 
-    width: 50%;
+    width: 60%;
     height: 50%;
 }
 
@@ -280,23 +280,48 @@ input:focus ~ label,
 
 footer{
     bottom: 0%;
-    background: #45658A;
+    background: #274E7D;
     visibility: collapse;
 }
 
 .socialMediaIcons{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: 10%;
+    margin-right: 5%;
 
     height: 50%;
-    width: 2%;
+    width: 20%;
     color: white;
 }
 
-.footerElement{
-    margin-right: 10%;
-    margin-left: 10%;
+.footerElement {
+    height: 100%;
+    margin-left: 2%;
+    width: 12%;
+}
+
+h3.footerElement{
+    height: 50%;
+}
+
+#ig:hover, #vk:hover, #fb:hover, #tw:hover{
+    cursor: pointer;
+}
+
+#ig:hover{
+    fill: #E4405F;
+}
+
+#vk:hover{
+    fill: #4680C2;
+}
+
+#fb:hover{
+    fill: #1877F2;
+}
+
+#tw:hover{
+    fill: #1DA1F2;
 }
