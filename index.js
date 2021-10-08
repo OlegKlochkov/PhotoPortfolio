@@ -1,6 +1,6 @@
 function changeLocation(id) {
     let parentElementId = window.location.hash != '' ? window.location.hash.replace('#', '') : 'intro';
-    if(id !== parentElementId){
+    if (id !== parentElementId) {
         location.href = '#';//required to work around a bug in WebKit (Chrome / Safari)
         location.href = '#' + id;
         document.getElementById(id).style.visibility = 'initial';
@@ -14,23 +14,53 @@ window.onwheel = function scrollBetweenInfo(event) {//function that only lets us
         case (''):
         case ('#intro'):
             if (event.deltaY > 0) {
-                changeLocation('works', 'intro');
+                changeLocation('works');
             }
             break;
         case ('#works'):
             if (event.deltaY > 0) {
-                changeLocation('feedback', 'works');
+                changeLocation('feedback');
             } else {
-                changeLocation('intro', 'works');
+                changeLocation('intro');
             }
             break;
         case ('#feedback'):
             if (event.deltaY < 0) {
-                changeLocation('works', 'feedback');
+                changeLocation('works');
             }
             break;
     }
 };
+
+window.addEventListener("keydown", event => {
+    if (event.isComposing || event.code === 229) {//required to ignore firing the event during IME composition in firefox 65
+        return;
+    }
+    event.preventDefault;
+    switch (window.location.hash) {
+        case (''):
+        case ('#intro'):
+            if (event.code == 'ArrowDown') {
+                changeLocation('works');
+            }
+            break;
+        case ('#works'):
+            if (event.code == 'ArrowDown') {
+                changeLocation('feedback');
+            } else {
+                if (event.code == 'ArrowUp') {
+                    changeLocation('intro');
+                }
+            }
+            break;
+        case ('#feedback'):
+            if (event.code == 'ArrowUp') {
+                changeLocation('works');
+            }
+            break;
+    }
+});
+
 window.onload = window.onhashchange = function loadCurrentLocation() {
     switch (window.location.hash) {
         case ('#works'):
