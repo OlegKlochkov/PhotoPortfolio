@@ -325,3 +325,20 @@ h3.footerElement{
 #tw:hover{
     fill: #1DA1F2;
 }
+
+@media only screen and (orientation: portrait){
+    #sendButton{
+        color: wheat;
+    }
+
+    .photoRow{
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
+    .photoRow img{
+        width: 80%;
+        height: 70%;
+        margin: 1%;
+    }
+} 
