@@ -13,19 +13,6 @@ html, body{
     display: none;
 }
 
-@media only screen and (max-height: 500px) {
-    .introduction{
-        background: url('images/streetBackground.webp') no-repeat top;
-    }
-}
-
-@media only screen and (min-height: 500px) {
-    .introduction{
-        background: url('images/streetBackground.webp') no-repeat center;
-        background-size: cover;
-    }
-}
-
 h1{
     font-family: 'Playfair Display', serif;
     font-size: min(4vw, 4vh);
@@ -138,8 +125,9 @@ main{
 }
 
 .introduction{
-    color: white;
+    background: url('images/streetBackground.webp') no-repeat center;
     background-size: cover;
+    color: white;
     visibility: initial;
 }
 
@@ -324,6 +312,12 @@ h3.footerElement{
 
 #tw:hover{
     fill: #1DA1F2;
+}
+
+@media only screen and (max-height: 500px) {
+    .introduction{
+        background: url('images/streetBackground.webp') no-repeat top;
+    }
 }
 
 @media only screen and (orientation: portrait){
