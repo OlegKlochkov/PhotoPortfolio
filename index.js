@@ -61,7 +61,7 @@ window.addEventListener("keydown", event => {
     }
 });
 
-window.onload = window.onhashchange = function loadCurrentLocation() {
+window.onbeforeprint = window.onload = window.onhashchange = function loadCurrentLocation() {
     switch (window.location.hash) {
         case ('#works'):
             document.getElementById('works').style.visibility = 'initial';
