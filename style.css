@@ -129,6 +129,7 @@ main{
     background-size: cover;
     color: white;
     visibility: initial;
+    background-color: rgb(26, 24, 24);
 }
 
 #photographer {

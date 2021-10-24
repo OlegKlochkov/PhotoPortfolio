@@ -64,10 +64,12 @@ window.addEventListener("keydown", event => {
 window.onbeforeprint = window.onload = window.onhashchange = function loadCurrentLocation() {
     switch (window.location.hash) {
         case ('#works'):
+            document.body.style.background = 'linear-gradient(to right,rgb(121, 85, 39),rgb(238, 219, 213),rgb(121, 85, 39),rgb(238, 219, 213),rgb(121, 85, 39),rgb(238, 219, 213),rgb(121, 85, 39),rgb(238, 219, 213),rgb(121, 85, 39))';
             document.getElementById('works').style.visibility = 'initial';
             document.getElementById('intro').style.visibility = 'collapse';
             break;
         case ('#feedback'):
+            document.body.style.background = 'linear-gradient(to bottom, rgb(255, 205, 102), rgb(255, 230, 119), rgb(255, 205, 102))'
             document.getElementById('feedback').style.visibility = 'initial';
             document.getElementById('intro').style.visibility = 'collapse';
             break;
